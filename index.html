@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meriem Beghili — Philosopher · Ethics of Social Robotics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf8f4;
+    --ink:#1c1b19;
+    --muted:#6b675f;
+    --line:#e4dfd5;
+    --accent:#8a6d3b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-weight:300;
+    font-size:15px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:0 28px}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif}
+
+  /* ---- header ---- */
+  header{padding:110px 0 70px;border-bottom:1px solid var(--line)}
+  header h1{font-size:56px;font-weight:500;letter-spacing:.5px;line-height:1.1}
+  header .tagline{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;font-size:22px;color:var(--muted);
+    margin-top:14px;
+  }
+  header .meta{margin-top:26px;font-size:13.5px;color:var(--muted);line-height:2}
+  header .meta a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+  header .meta a:hover{border-color:var(--accent)}
+
+  /* ---- nav ---- */
+  nav{
+    position:sticky;top:0;z-index:10;
+    background:rgba(250,248,244,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+    padding:14px 0;
+  }
+  nav .wrap{display:flex;gap:28px;flex-wrap:wrap}
+  nav a{
+    font-size:12px;letter-spacing:1.6px;text-transform:uppercase;
+    color:var(--muted);text-decoration:none;transition:color .2s;
+  }
+  nav a:hover{color:var(--ink)}
+
+  /* ---- sections ---- */
+  section{padding:70px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:none}
+  h2{
+    font-size:30px;font-weight:500;margin-bottom:34px;letter-spacing:.4px;
+  }
+  section p{margin-bottom:18px;color:#33302a}
+  section p:last-child{margin-bottom:0}
+  em{font-style:italic}
+
+  .lead{font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.6;font-weight:400}
+
+  /* ---- publications ---- */
+  .pub{margin-bottom:22px;padding-left:20px;border-left:2px solid var(--line)}
+  .pub:hover{border-color:var(--accent)}
+  .pub .t{font-weight:400}
+  .pub .j{color:var(--muted);font-size:13.5px}
+  .pub .status{
+    font-size:10.5px;letter-spacing:1px;text-transform:uppercase;
+    color:var(--accent);margin-left:8px;white-space:nowrap;
+  }
+  .pub-sub{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;
+    color:var(--muted);margin:30px 0 18px}
+
+  /* ---- lists ---- */
+  ul.clean{list-style:none}
+  ul.clean li{margin-bottom:14px;padding-left:20px;position:relative}
+  ul.clean li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+  ul.clean .when{color:var(--muted);font-size:13px}
+
+  /* ---- contact ---- */
+  .contact-links{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+  .contact-links a{
+    color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);
+    width:fit-content;transition:border-color .2s;
+  }
+  .contact-links a:hover{border-color:var(--accent)}
+
+  footer{padding:44px 0 60px;color:var(--muted);font-size:12px;letter-spacing:.5px}
+
+  @media(max-width:640px){
+    header h1{font-size:40px}
+    header{padding:70px 0 50px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#talks">Talks</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<header>
+  <h1>Meriem Beghili</h1>
+  <p class="tagline">Philosopher — ethics, social robotics &amp; healthcare technologies</p>
+  <div class="meta">
+    PhD candidate in philosophy, Sorbonne Université / ISIR–CNRS<br>
+    Research Engineer, ISIR (CNRS) — Sorbonne Université<br>
+    Paris, France
+  </div>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <p class="lead">I am a philosopher working at the intersection of ethics, social robotics, and healthcare technologies.</p>
+  <p>I am completing a PhD in philosophy at Sorbonne Université (ISIR–CNRS, expected defense July 2026), on the ethical issues raised by the use of social robots in healthcare. Since 2026 I have also been a Research Engineer at ISIR (CNRS), on the INNOVCARE project — an interdisciplinary effort on care-led innovation for elderly autonomy.</p>
+  <p>My work moves between conceptual analysis and the field: qualitative interviews with healthcare professionals and roboticists, ethical risk assessment, and close collaboration with engineers on human–robot interaction in care settings.</p>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+  <p><strong>Thesis.</strong> <em>Ethical Issues in the Use of Social Robots in Healthcare</em> — supervised by Anouk Barberousse and Mohamed Chetouani. Affiliations: Sciences, Normes, Décision (SND), Institut des Systèmes Intelligents et de Robotique (ISIR–CNRS), Sorbonne Center for Artificial Intelligence (SCAI).</p>
+  <p>My research asks what is at stake — ethically, relationally, and institutionally — when robots enter care relationships: autonomy and its natural/artificial divide, trust in human–robot interaction, the invisible labour of care personnel, and the conditions for morally accountable design.</p>
+  <p>I contribute to interdisciplinary projects including INNOVCARE (France 2030 / ANR, France–Japan) and TAPAS (Franco-Japanese collaboration).</p>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+
+  <p class="pub-sub">Peer-reviewed &amp; forthcoming</p>
+  <div class="pub"><div class="t">Handbook of Human–AI Collaboration (Springer)</div>
+    <div class="j">Beghili, M. (2026). Ethical Dimensions of Human–AI Collaboration: A Philosophical Perspective. In <a href="https://link.springer.com/book/10.1007/978-3-031-61050-9" target="_blank" style="color:inherit">Handbook of Human–AI Collaboration</a>, Chetouani, Nowak &amp; Lukowicz (eds.). doi:10.1007/978-3-031-61050-9</div></div>
+  <div class="pub"><div class="t">Assistive Robots for Elder Care: Let Us Not Neglect the Invisible Labour of Care Personnel <span class="status">Accepted</span></div>
+    <div class="j">Dhaussy, T., Beghili, M., Chetouani, M., Alami, R. (2026).</div></div>
+  <div class="pub"><div class="t">Positioning Explanations for Trust on Rational vs Human-like Thinking and Behavior <span class="status">Accepted</span></div>
+    <div class="j">Tielman, M., Meyer-Vitali, A., Giannotti, F., Azzini, A., Beghili, M., Mukherjee, S., Fanti, A., Sent, D. (2026).</div></div>
+  <div class="pub"><div class="t">Reasoning LLMs for User-Aware Multimodal Conversational Agents <span class="status">Accepted</span></div>
+    <div class="j">Rahimi, H., Cattoni, J., Beghili, M., Abrini, M., Khoramshahi, M., Pino, M., Chetouani, M. (2025). <a href="https://arxiv.org/abs/2504.01700" target="_blank" style="color:inherit">arXiv:2504.01700</a></div></div>
+  <div class="pub"><div class="t">L'utilis­ation des robots sociaux dans le soin : quels enjeux éthiques ?</div>
+    <div class="j">Beghili, M. (2024). IHM'24 — 35th French-speaking International Conference on Human–Machine Interaction, AFIHM, Paris. <a href="https://hal.science/hal-04490644" target="_blank" style="color:inherit">HAL</a></div></div>
+  <div class="pub"><div class="t">Ethical Perspectives on Natural Autonomy and Artificial Autonomy</div>
+    <div class="j">Beghili, M., Chetouani, M., Barberousse, A. (2024). Proceedings of Robophilosophy 2024, IOS Press, Aarhus, pp. 77–84. <a href="https://doi.org/10.3233/FAIA241491" target="_blank" style="color:inherit">doi:10.3233/FAIA241491</a></div></div>
+
+  <p class="pub-sub">Under review &amp; in progress</p>
+  <div class="pub"><div class="t">Ethical Risk Assessment Approach for Social Robots in Healthcare: Insights from Real and Imaginary Robots <span class="status">Under review</span></div>
+    <div class="j">Beghili, M., Chetouani, M., Barberousse, A.</div></div>
+  <div class="pub"><div class="t">Trust in Human–Robot Interaction: Ethical Foundations and the Design of Trustworthy Social Robots in Healthcare <span class="status">In progress</span></div>
+    <div class="j">Beghili, M., Pistilli, G., Chetouani, M., Barberousse, A. (2026).</div></div>
+  <div class="pub"><div class="t">Social Robots Should Not Be Designed for Moral Autonomy, but for Moral Traceability <span class="status">In progress</span></div>
+    <div class="j">Beghili, M., Tallent, A. (2026).</div></div>
+</section>
+
+<section id="talks">
+  <h2>Talks &amp; Conferences</h2>
+  <ul class="clean">
+    <li>“Building Trust in Human–Machine Interaction: Ethical Challenges” — HHAI 2025, MULTITRUST 4.0 workshop, Pisa. <span class="when">June 2025</span></li>
+    <li>“Ethical Perspectives on Natural Autonomy and Artificial Autonomy” — Robophilosophy 2024, Aarhus. <span class="when">August 2024</span></li>
+    <li>Doctoral seminar — IHM 2024, Paris. <span class="when">March 2024</span></li>
+    <li>OFFRES network seminar, Poitiers. <span class="when">July 2024</span></li>
+    <li>Panelist, Ethics of Robotics and AI Conference (CERIA), with Serge Tisseron and Aurore Kiesler, Paris. <span class="when">December 2023</span></li>
+    <li>Panelist, “Ethics and AI,” ISIR, with Daniel Andler and Mohamed Chetouani, Paris. <span class="when">June 2023</span></li>
+    <li>3rd Annual INNOVCARE Forum, EHESS, Paris. <span class="when">November 2023</span></li>
+  </ul>
+</section>
+
+<section id="teaching">
+  <h2>Teaching</h2>
+  <ul class="clean">
+    <li><strong>Course author &amp; lecturer</strong> — <em>Introduction to the Philosophy of AI</em>, Faculty of Arts and Humanities, Sorbonne Université (undergraduate, ~35 students): original syllabus, lectures, assessments; supervised a guided research project on the Replika app. <span class="when">2022–2023</span></li>
+    <li><strong>Teaching assistant</strong> — Ethics and General Philosophy, Sorbonne Université (~35 students per course); supervised three guided research projects. <span class="when">2022–2023</span></li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>I welcome conversations about research, collaboration, and everything in between.</p>
+  <div class="contact-links">
+    <a href="mailto:meriem.beghili@sorbonne-universite.fr">meriem.beghili@sorbonne-universite.fr</a>
+    <a href="mailto:meriem.beghili@gmail.com">meriem.beghili@gmail.com</a>
+    <a href="https://orcid.org/0009-0009-8560-560X" target="_blank">ORCID — 0009-0009-8560-560X</a>
+    <a href="https://www.linkedin.com/in/meriem-beghili-726046259/" target="_blank">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="padding:0">
+    © 2026 Meriem Beghili · Paris
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
