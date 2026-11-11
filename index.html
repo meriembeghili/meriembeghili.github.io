@@ -13,7 +13,17 @@
     --muted:#6b675f;
     --line:#e4dfd5;
     --accent:#8a6d3b;
+    --card:#33302a;
   }
+  [data-theme="dark"]{
+    --bg:#14130f;
+    --ink:#e8e4da;
+    --muted:#8f8a7d;
+    --line:#2e2b25;
+    --accent:#c9a86a;
+    --card:#1c1a15;
+  }
+  [data-theme="dark"] section p{color:#c7c2b6}
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
@@ -24,6 +34,7 @@
     font-size:15px;
     line-height:1.75;
     -webkit-font-smoothing:antialiased;
+    transition:background .25s,color .25s;
   }
   .wrap{max-width:680px;margin:0 auto;padding:0 28px}
   h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif}
@@ -43,11 +54,21 @@
   /* ---- nav ---- */
   nav{
     position:sticky;top:0;z-index:10;
-    background:rgba(250,248,244,.92);backdrop-filter:blur(8px);
+    background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line);
     padding:14px 0;
   }
   nav .wrap{display:flex;gap:22px;flex-wrap:nowrap;justify-content:center;overflow-x:auto}
+  nav .wrap{margin:0 auto;max-width:none;padding:0 28px}
+  #theme-toggle{
+    position:fixed;top:14px;right:18px;z-index:20;
+    width:34px;height:34px;border-radius:50%;
+    border:1px solid var(--line);background:var(--bg);color:var(--ink);
+    font-size:15px;line-height:1;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    transition:all .2s;
+  }
+  #theme-toggle:hover{border-color:var(--accent)}
   nav a{
     font-size:11px;letter-spacing:1.2px;text-transform:uppercase;white-space:nowrap;
     color:var(--muted);text-decoration:none;transition:color .2s;
@@ -124,6 +145,24 @@
 </nav>
 
 <div class="wrap">
+
+<button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+<script>
+(function(){
+  var t=document.getElementById('theme-toggle');
+  var saved=localStorage.getItem('theme');
+  if(saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches)){
+    document.documentElement.setAttribute('data-theme','dark');
+    t.textContent='☀';
+  }
+  t.addEventListener('click',function(){
+    var dark=document.documentElement.getAttribute('data-theme')==='dark';
+    document.documentElement.setAttribute('data-theme',dark?'light':'dark');
+    localStorage.setItem('theme',dark?'light':'dark');
+    t.textContent=dark?'☾':'☀';
+  });
+})();
+</script>
 
 <header>
   <h1>Meriem Beghili</h1>
