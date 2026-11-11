@@ -125,7 +125,7 @@
 
   /* ---- animations ---- */
   @media (prefers-reduced-motion: no-preference){
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+    .reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
     .reveal.in{opacity:1;transform:none}
     .reveal.in > *{animation:fadeUp .8s ease both}
     .reveal.in > *:nth-child(2){animation-delay:.12s}
@@ -158,6 +158,23 @@
     to{transform:translateX(-40%) translate(60px,24px) scale(1.15)}
   }
   header{position:relative}
+
+  /* ---- chapter blocks (Hermes-style) ---- */
+  .chapter{
+    display:flex;gap:24px;align-items:baseline;
+    padding:26px 0 30px;margin-bottom:8px;
+  }
+  .chapter:nth-child(even){flex-direction:row-reverse;text-align:right}
+  .chapter .num{
+    font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:400;
+    color:var(--accent);opacity:.55;line-height:1;flex-shrink:0;
+    min-width:64px;
+  }
+  .chapter h3{font-size:23px;font-weight:500;margin-bottom:8px}
+  .chapter p{margin-bottom:0 !important}
+  @media(max-width:640px){
+    .chapter,.chapter:nth-child(even){flex-direction:column;text-align:left;gap:8px;padding:20px 0}
+  }
   nav a{position:relative}
   nav a::after{
     content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;
@@ -254,10 +271,28 @@
 <section id="research">
   <h2>Research</h2>
   <p><strong>Thesis.</strong> <em>Ethical Issues in the Use of Social Robots in Healthcare</em> — supervised by Anouk Barberousse and Mohamed Chetouani. Affiliations: Sciences, Normes, Décision (SND), Institut des Systèmes Intelligents et de Robotique (ISIR–CNRS), Sorbonne Center for Artificial Intelligence (SCAI).</p>
-  <p class="lead">The dissertation examines the ethical issues surrounding the introduction and deployment, into care relationships, of artificial entities designed to simulate a social presence — and demonstrates that they are morally incapable of being what our vocabulary suggests they are, a discrepancy that becomes a major ethical problem in this context.</p>
-  <p>The first chapter analyzes <strong>trust</strong> in human–robot interaction and argues that trust directed toward machines lacks the moral foundation that characterizes interpersonal trust, which is based on goodwill, reciprocity, and affective responsiveness. This absence opens ethical risks in healthcare settings, where patients' vulnerability must be taken into account as a fundamental aspect of the caregiver–patient relationship.</p>
-  <p>The second chapter focuses on <strong>autonomy</strong> and describes a semantic drift whose reduced usages emerged in parallel in moral philosophy, biomedical ethics, geriatric medicine, and AI research and engineering. For the systems examined, what the word designates is heteronomy in Kant's sense: behavior is determined by objectives and constraints set from outside. The equivocation encourages the anthropomorphization of machines, the responsibility gap, and the dehumanization of care.</p>
-  <p>The third chapter moves from theoretical analysis to practical assessment by proposing an <strong>operational approach</strong> for evaluating the ethical risks associated with the use of social robots in healthcare settings, illustrated by two case studies (PARO and MediXpert, an imaginary robot).</p>
+  <p>The dissertation examines the ethical issues surrounding the introduction and deployment, into care relationships, of artificial entities designed to simulate a social presence — and demonstrates that they are morally incapable of being what our vocabulary suggests they are, a discrepancy that becomes a major ethical problem in this context.</p>
+  <div class="chapter">
+    <div class="num">01</div>
+    <div>
+      <h3>Trust</h3>
+      <p>Trust directed toward machines lacks the moral foundation that characterizes interpersonal trust — goodwill, reciprocity, affective responsiveness. This absence opens ethical risks in healthcare settings, where patients' vulnerability must be taken into account as a fundamental aspect of the caregiver–patient relationship.</p>
+    </div>
+  </div>
+  <div class="chapter">
+    <div class="num">02</div>
+    <div>
+      <h3>Autonomy</h3>
+      <p>A semantic drift whose reduced usages emerged in parallel in moral philosophy, biomedical ethics, geriatric medicine, and AI research and engineering. For the systems examined, what the word designates is heteronomy in Kant's sense: behavior is determined by objectives and constraints set from outside. The equivocation encourages the anthropomorphization of machines, the responsibility gap, and the dehumanization of care.</p>
+    </div>
+  </div>
+  <div class="chapter">
+    <div class="num">03</div>
+    <div>
+      <h3>Risk Assessment</h3>
+      <p>From theoretical analysis to practical assessment: an operational approach for evaluating the ethical risks associated with the use of social robots in healthcare settings, illustrated by two case studies (PARO and MediXpert, an imaginary robot).</p>
+    </div>
+  </div>
   <p>The thesis does not challenge the deployment of social robots in healthcare settings, but instead calls for philosophical vigilance with respect to the language used to describe them: terms such as “trust”, “autonomy”, and “care” carry moral presuppositions that machines are, by their nature, incapable of satisfying. These risks are especially pronounced in care relationships, which are inherently defined by vulnerability and asymmetry.</p>
   <p>I contribute to interdisciplinary projects including INNOVCARE (France 2030 / ANR, France–Japan) and TAPAS (Franco-Japanese collaboration).</p>
 </section>
