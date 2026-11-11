@@ -123,6 +123,26 @@
 
   footer{padding:44px 0 60px;color:var(--muted);font-size:12px;letter-spacing:.5px}
 
+  /* ---- animations ---- */
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.in{opacity:1;transform:none}
+    header h1,.tagline,.meta{animation:fadeUp .9s ease both}
+    .tagline{animation-delay:.15s}
+    .meta{animation-delay:.3s}
+  }
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  nav a{position:relative}
+  nav a::after{
+    content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;
+    background:var(--accent);transition:width .25s ease;
+  }
+  nav a:hover::after{width:100%}
+  .pub{transition:border-color .2s,transform .2s}
+  .pub:hover{transform:translateX(3px)}
+  ul.clean li{transition:transform .2s}
+  ul.clean li:hover{transform:translateX(3px)}
+
   @media(max-width:640px){
     header h1{font-size:40px}
     header{padding:70px 0 50px}
@@ -285,5 +305,18 @@
 </footer>
 
 </div>
+
+<script>
+(function(){
+  var sections=document.querySelectorAll('header, section');
+  sections.forEach(function(s){s.classList.add('reveal')});
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+    });
+  },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+  sections.forEach(function(s){io.observe(s)});
+})();
+</script>
 </body>
 </html>
