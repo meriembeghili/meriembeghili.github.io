@@ -40,6 +40,14 @@
   header .meta a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
   header .meta a:hover{border-color:var(--accent)}
 
+  .stats{
+    display:flex;flex-wrap:wrap;gap:0 40px;
+    padding:26px 0 0;margin-top:34px;border-top:1px solid var(--line);
+  }
+  .stats .stat{padding-right:40px}
+  .stats .n{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;line-height:1.1}
+  .stats .l{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+
   /* ---- nav ---- */
   nav{
     position:sticky;top:0;z-index:10;
@@ -92,6 +100,14 @@
   }
   .contact-links a:hover{border-color:var(--accent)}
 
+  .btn{
+    display:inline-block;margin-top:4px;padding:10px 22px;
+    border:1px solid var(--ink);text-decoration:none;
+    font-size:11px;letter-spacing:1.8px;text-transform:uppercase;
+    color:var(--ink);transition:all .2s;
+  }
+  .btn:hover{background:var(--ink);color:var(--bg)}
+
   footer{padding:44px 0 60px;color:var(--muted);font-size:12px;letter-spacing:.5px}
 
   @media(max-width:640px){
@@ -105,6 +121,8 @@
 <nav>
   <div class="wrap">
     <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#expertise">Expertise</a>
     <a href="#research">Research</a>
     <a href="#publications">Publications</a>
     <a href="#talks">Talks</a>
@@ -123,6 +141,12 @@
     Research Engineer, ISIR (CNRS) — Sorbonne Université<br>
     Paris, France
   </div>
+  <div class="stats">
+    <div class="stat"><div class="n">6</div><div class="l">Peer-reviewed publications</div></div>
+    <div class="stat"><div class="n">1</div><div class="l">Ethical-risk framework, designed &amp; led by me</div></div>
+    <div class="stat"><div class="n">2</div><div class="l">Funded projects (France–Japan)</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">Countries — invited talks</div></div>
+  </div>
 </header>
 
 <section id="about">
@@ -131,6 +155,27 @@
   <p>I am completing a PhD at Sorbonne Université (ISIR–CNRS) on the ethical issues raised by the use of social robots in healthcare (defense expected December 2026), and I work as a Research Engineer at ISIR (CNRS) on INNOVCARE, an interdisciplinary project on care-led innovation for elderly autonomy.</p>
   <p>My doctoral research led me to design a reusable ethical-risk assessment framework for AI systems and robots deployed in healthcare, applicable both to systems already in use and to prospective cases. My fieldwork in care settings — semi-structured interviews with clinicians, caregivers, and roboticists — surfaces risks that designers had not anticipated. I have led cross-cutting work with roboticists, clinicians, and project partners on two funded projects (INNOVCARE, TAPAS), including an international Franco-Japanese consortium.</p>
   <p>This research has resulted in six peer-reviewed publications on trust, explainability, LLM-based conversational agents, and assistive robotics; invited and conference talks in three countries; and service on the programme committee of HHAI 2026. My interests now extend to AI governance and AI Act compliance.</p>
+  <p><strong>Now:</strong> completing my PhD (defense December 2026) · open to roles in AI ethics, governance &amp; compliance.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <ul class="clean">
+    <li><strong>Ethical-risk assessment framework for AI &amp; robots in healthcare</strong> — designed and led by me: a reusable methodology to evaluate ethical risks of AI systems and social robots, applied both to systems already deployed in care settings and to prospective cases (PARO, MediXpert). Built from qualitative fieldwork with clinicians, caregivers, and roboticists. <span class="when">2022–now</span></li>
+    <li><strong>INNOVCARE</strong> (France 2030 / ANR) — Research Engineer on care-led innovation for elderly autonomy, inside a Franco-Japanese consortium: interface between humanities research and robotics engineering teams, in a deliverable-driven setting. <span class="when">2026</span></li>
+    <li><strong>TAPAS</strong> — Franco-Japanese collaboration on human–robot interaction in care settings: research presentations and cross-team coordination with roboticists and healthcare professionals. <span class="when">2023</span></li>
+    <li><strong>Doctoral fieldwork</strong> — semi-structured interviews with stakeholders in care settings, thematic analysis, and identification of use risks that designers had not anticipated. <span class="when">2022–2026</span></li>
+  </ul>
+</section>
+
+<section id="skills">
+  <h2>Expertise</h2>
+  <ul class="clean">
+    <li><strong>AI ethics &amp; governance</strong> — ethical risk assessment; AI Act compliance; responsible design of AI systems and social robots</li>
+    <li><strong>AI-augmented development</strong> — AI-assisted coding and workflows (Cursor, Hermes); GitHub (version control, automation); prompt engineering; designing and running agentic task automation</li>
+    <li><strong>Research methods</strong> — qualitative methods (semi-structured interviews, thematic analysis); interdisciplinary literature review across philosophy, robotics, AI, medicine, and sociology</li>
+    <li><strong>Communication</strong> — academic writing and public speaking in French and English; science outreach to non-specialist audiences; open-access dissemination (HAL)</li>
+  </ul>
 </section>
 
 <section id="research">
@@ -179,7 +224,13 @@
     <li>OFFRES network seminar, Poitiers. <span class="when">July 2024</span></li>
     <li>Panelist, Ethics of Robotics and AI Conference (CERIA), with Serge Tisseron and Aurore Kiesler, Paris. <span class="when">December 2023</span></li>
     <li>Panelist, “Ethics and AI,” ISIR, with Daniel Andler and Mohamed Chetouani, Paris. <span class="when">June 2023</span></li>
+    <li>Panelist, GRH seminar “Combining New Technologies and Human Relations,” IRCOM, Angers. <span class="when">February 2024</span></li>
     <li>3rd Annual INNOVCARE Forum, EHESS, Paris. <span class="when">November 2023</span></li>
+    <li>Research presentation, Hôpital Broca, Paris. <span class="when">March 2023</span></li>
+    <li>Research presentation, TAPAS project meeting, ISIR, Paris. <span class="when">September 2023</span></li>
+    <li>“Applying Philosophy of Science and Technology,” Sorbonne Université. <span class="when">March 2024</span></li>
+    <li>Research presentation, SND doctoral students’ day, Paris. <span class="when">June 2024</span></li>
+    <li>Science Festival, Faculty of Science and Engineering, Sorbonne Université. <span class="when">October 2024</span></li>
   </ul>
 </section>
 
@@ -193,6 +244,7 @@
 
 <section id="contact">
   <h2>Contact</h2>
+  <p><a class="btn" href="assets/CV_Meriem_Beghili.pdf" download>Download my CV (PDF)</a></p>
   <div class="contact-links">
     <a href="mailto:meriem.beghili@sorbonne-universite.fr">meriem.beghili@sorbonne-universite.fr</a>
     <a href="mailto:meriem.beghili@gmail.com">meriem.beghili@gmail.com</a>
