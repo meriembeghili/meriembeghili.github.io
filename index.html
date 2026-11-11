@@ -127,11 +127,37 @@
   @media (prefers-reduced-motion: no-preference){
     .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
     .reveal.in{opacity:1;transform:none}
+    .reveal.in > *{animation:fadeUp .8s ease both}
+    .reveal.in > *:nth-child(2){animation-delay:.12s}
+    .reveal.in > *:nth-child(3){animation-delay:.24s}
+    .reveal.in > *:nth-child(4){animation-delay:.36s}
+    .reveal.in > *:nth-child(5){animation-delay:.48s}
     header h1,.tagline,.meta{animation:fadeUp .9s ease both}
     .tagline{animation-delay:.15s}
     .meta{animation-delay:.3s}
+    .aura{
+      position:absolute;top:-60px;left:50%;transform:translateX(-50%);
+      width:520px;height:340px;pointer-events:none;z-index:-1;
+      background:radial-gradient(closest-side, color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%);
+      filter:blur(30px);
+      animation:drift 12s ease-in-out infinite alternate;
+    }
+    h2::after{
+      content:"";display:block;width:0;height:1px;margin-top:10px;
+      background:var(--accent);transition:width 1s ease .3s;
+    }
+    .reveal.in h2::after{width:52px}
+    #progress{
+      position:fixed;top:0;left:0;height:2px;width:0;z-index:30;
+      background:linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 40%, var(--ink)));
+    }
   }
   @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes drift{
+    from{transform:translateX(-50%) translate(0,0) scale(1)}
+    to{transform:translateX(-40%) translate(60px,24px) scale(1.15)}
+  }
+  header{position:relative}
   nav a{position:relative}
   nav a::after{
     content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;
@@ -167,6 +193,8 @@
 
 <div class="wrap">
 
+<div id="progress"></div>
+<div class="aura"></div>
 <script>
 (function(){
   var t=document.getElementById('theme-toggle');
@@ -316,6 +344,12 @@
     });
   },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
   sections.forEach(function(s){io.observe(s)});
+  var bar=document.getElementById('progress');
+  window.addEventListener('scroll',function(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';
+  },{passive:true});
 })();
 </script>
 </body>
